@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+    /*Code One won't work, because the script is written in the head tag and the document is interpretted line by line so when it reaches the script the h1 element will still not be defined yet */
+      // Code One
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      // Code Two
+     window.onload = function () {
+       document.getElementById("el").style.color = "red";
+     };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      // Code Three
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html>
